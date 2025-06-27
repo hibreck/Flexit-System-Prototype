@@ -169,11 +169,22 @@ public class FlexitGizmoRotate : MonoBehaviour
             deltaAngle = Mathf.Sign(scrollValue.y) * rotationStep; // крок 5 градусів
         }
 
-        target.Rotate(Vector3.up, deltaAngle, Space.World);
+        Vector3 pivot = handlesRoot.position; // півот для обертання
+
+        // Обираємо вісь обертання (наприклад, Y - Vector3.up)
+        Vector3 axis = Vector3.up;
+
+        // Зсув позиції target в систему координат півота, обертання, і повернення назад
+        Vector3 dir = target.position - pivot;         // вектор від півота до позиції target
+        dir = Quaternion.AngleAxis(deltaAngle, axis) * dir;  // повертаємо вектор на deltaAngle навколо осі
+        target.position = pivot + dir;                 // нова позиція target після обертання
+
+        target.Rotate(axis, deltaAngle, Space.World); // обертання самого target на deltaAngle
 
         Vector3 normalizedRotation = NormalizeEuler(target.localEulerAngles);
         gizmoInfoUI.SetRotateInfo(normalizedRotation);
     }
+
 
 
 

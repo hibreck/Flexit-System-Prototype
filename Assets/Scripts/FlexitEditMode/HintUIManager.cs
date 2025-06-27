@@ -33,8 +33,7 @@ public class HintUIManager : MonoBehaviour
         public const string Move =
             "<b>Tips:</b>\n" +
             "- <b>LMB / Scroll</b>: Move on one axis\n" +
-            "- <b>Shift + LMB / Scroll</b>: Fine movement\n" +
-            "- <b>R</b>: Snap to grid";
+            "- <b>Shift + LMB / Scroll</b>: Fine movement";
 
         public const string MovePivot =
             "<b>Tips:</b>\n" +
@@ -60,8 +59,8 @@ public class HintUIManager : MonoBehaviour
 
         public const string Rotate =
             "<b>Tips:</b>\n" +
-            "- <b>LMB</b>: Rotate snap\n" +
-            "- <b>Shift + LMB</b>: Smooth rotate\n" +
+            "- <b>LMB / Scroll</b>: Rotate snap\n" +
+            "- <b>Shift + LMB / Scroll</b>: Smooth rotate\n" +
             "- <b>R</b>: Reset rotate";
 
         public const string Scale =

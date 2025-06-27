@@ -162,7 +162,7 @@ public class FlexitGizmoPivot : MonoBehaviour
 
     private void UpdateHandles()
     {
-        if (handlesRoot == null || cam == null) return;
+        if (handlesRoot == null || cam == null || target == null) return;
 
         Vector3 center = handlesRoot.position;
         Vector3 camPos = cam.transform.position;
@@ -173,22 +173,25 @@ public class FlexitGizmoPivot : MonoBehaviour
         float baseHandleScale = 0.1f;
         float baseHandleOffset = 0.5f;
 
-        Vector3 right = Vector3.right;
-        Vector3 left = -Vector3.right;
-        Vector3 up = Vector3.up;
-        Vector3 down = -Vector3.up;
-        Vector3 forward = Vector3.forward;
-        Vector3 back = -Vector3.forward;
+        Quaternion onlyYRotation = Quaternion.Euler(0f, target.eulerAngles.y, 0f);
+
+        Vector3 localRight = onlyYRotation * Vector3.right;    // ¬≥сь X обмежена по Y
+        Vector3 localUp = Vector3.up;                           // √лобальна Y (без зм≥н)
+        Vector3 localForward = onlyYRotation * Vector3.forward; // ¬≥сь Z обмежена по Y
+
 
         Vector3 dirToCam = (camPos - center).normalized;
 
-        SetHandleTransform(redHandlePos, center + right * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(right, Vector3.up), Vector3.Dot(dirToCam, right));
-        SetHandleTransform(redHandleNeg, center + left * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(left, Vector3.up), Vector3.Dot(dirToCam, left));
-        SetHandleTransform(greenHandlePos, center + up * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(up, Vector3.up), Vector3.Dot(dirToCam, up));
-        SetHandleTransform(greenHandleNeg, center + down * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(down, Vector3.up), Vector3.Dot(dirToCam, down));
-        SetHandleTransform(blueHandlePos, center + forward * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(forward, Vector3.up), Vector3.Dot(dirToCam, forward));
-        SetHandleTransform(blueHandleNeg, center + back * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(back, Vector3.up), Vector3.Dot(dirToCam, back));
+        SetHandleTransform(redHandlePos, center + localRight * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(localRight, Vector3.up), Vector3.Dot(dirToCam, localRight));
+        SetHandleTransform(redHandleNeg, center - localRight * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(-localRight, Vector3.up), Vector3.Dot(dirToCam, -localRight));
+
+        SetHandleTransform(greenHandlePos, center + localUp * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(localUp, Vector3.forward), Vector3.Dot(dirToCam, localUp));
+        SetHandleTransform(greenHandleNeg, center - localUp * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(-localUp, Vector3.forward), Vector3.Dot(dirToCam, -localUp));
+
+        SetHandleTransform(blueHandlePos, center + localForward * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(localForward, Vector3.up), Vector3.Dot(dirToCam, localForward));
+        SetHandleTransform(blueHandleNeg, center - localForward * baseHandleOffset * scaleFactor, baseHandleScale * scaleFactor, Quaternion.LookRotation(-localForward, Vector3.up), Vector3.Dot(dirToCam, -localForward));
     }
+
 
     private void SetHandleTransform(GameObject handle, Vector3 position, float baseScale, Quaternion rotation, float dot)
     {
@@ -272,38 +275,52 @@ public class FlexitGizmoPivot : MonoBehaviour
 
         Vector3 newPosition = initialPivotPos + offset;
 
-        if (Keyboard.current.leftCtrlKey.isPressed)
+        Collider col = target.GetComponent<Collider>();
+        bool isInside = false;
+
+        if (col != null)
         {
-            Collider col = target.GetComponent<Collider>();
-            if (col != null)
+            isInside = IsPointInsideCollider(handlesRoot.position, col);
+        }
+
+        if (!Keyboard.current.leftCtrlKey.isPressed)
+        {
+            // Ctrl не натиснутий, обмежуЇмо лише €кщо п≥вот всередин≥ колайдера
+            if (col != null && isInside)
             {
                 newPosition = ClampPositionToCollider(newPosition, col);
             }
+            // якщо п≥вот поза колайдером - clamp не застосовуЇмо
         }
+        // якщо Ctrl натиснутий - п≥вот може бути куди завгодно (обмежень немаЇ)
 
         handlesRoot.position = newPosition;
         gizmoInfoUI?.SetPivotPositionInfo(handlesRoot.position);
     }
 
+    // ћетод перев≥рки чи точка всередин≥ колайдера
+    private bool IsPointInsideCollider(Vector3 worldPos, Collider col)
+    {
+        Vector3 closest = col.ClosestPoint(worldPos);
+        // якщо closest == worldPos, значить точка всередин≥ (або дуже близько)
+        float distanceSqr = (closest - worldPos).sqrMagnitude;
+        return distanceSqr < 0.0001f; // невеликий допуск через float похибку
+    }
+
+
+
     private Vector3 ClampPositionToCollider(Vector3 worldPos, Collider col)
     {
-        Vector3 localPos = target.InverseTransformPoint(worldPos);
+        Vector3 closest = col.ClosestPoint(worldPos);
 
-        if (col is BoxCollider box)
-        {
-            Vector3 halfSize = box.size * 0.5f;
-            Vector3 center = box.center;
-
-            Vector3 min = center - halfSize;
-            Vector3 max = center + halfSize;
-
-            localPos.x = Mathf.Clamp(localPos.x, min.x, max.x);
-            localPos.y = Mathf.Clamp(localPos.y, min.y, max.y);
-            localPos.z = Mathf.Clamp(localPos.z, min.z, max.z);
-        }
-
-        return target.TransformPoint(localPos);
+        // якщо closest == worldPos - точка всередин≥, повертаЇмо њњ
+        // ≤накше - повертаЇмо closest, щоб не виходити за меж≥ колайдера
+        if ((closest - worldPos).sqrMagnitude < 0.0001f)
+            return worldPos;
+        else
+            return closest;
     }
+
 
     public void OnCtrlMiddleClick()
     {
@@ -331,14 +348,27 @@ public class FlexitGizmoPivot : MonoBehaviour
 
     private Vector3 GetHandleAxis(GameObject handle)
     {
-        if (handle == redHandlePos) return Vector3.right;
-        if (handle == redHandleNeg) return Vector3.left;
+        if (target == null) return Vector3.zero;
+
+        Quaternion onlyYRotation = Quaternion.Euler(0f, target.eulerAngles.y, 0f);
+
+        Vector3 right = onlyYRotation * Vector3.right;
+        Vector3 forward = onlyYRotation * Vector3.forward;
+
+        if (handle == redHandlePos) return right;
+        if (handle == redHandleNeg) return -right;
+
         if (handle == greenHandlePos) return Vector3.up;
-        if (handle == greenHandleNeg) return Vector3.down;
-        if (handle == blueHandlePos) return Vector3.forward;
-        if (handle == blueHandleNeg) return Vector3.back;
+        if (handle == greenHandleNeg) return -Vector3.up;
+
+        if (handle == blueHandlePos) return forward;
+        if (handle == blueHandleNeg) return -forward;
+
+
+
         return Vector3.zero;
     }
+
 
     public void SetHandlesActive(bool active)
     {
