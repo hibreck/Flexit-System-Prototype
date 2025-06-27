@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+// Цей коментар додано для тесту Git
 
 public class OutlineManager : MonoBehaviour
 {
