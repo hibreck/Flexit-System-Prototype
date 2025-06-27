@@ -55,18 +55,31 @@ public class FlexitItem : Item
             instance.name = flexitPrefab.name;
 
             Collider instanceCollider = instance.GetComponent<Collider>();
+
+            Vector3 placePos;
             if (instanceCollider != null)
             {
                 Vector3 pointOnSurface = instanceCollider.ClosestPoint(hit.point - hit.normal * 10f);
                 Vector3 offset = instance.transform.position - pointOnSurface;
-                instance.transform.position = hit.point + offset;
+                placePos = hit.point + offset;
             }
             else
             {
-                instance.transform.position = hit.point;
+                placePos = hit.point;
             }
 
-            instance.transform.rotation = Quaternion.identity;
+            // Визначаємо горизонтальний напрямок камери (ігноруємо Y)
+            Vector3 forward = cam.transform.forward;
+            forward.y = 0f;
+            forward.Normalize();
+
+            if (forward.sqrMagnitude < 0.001f)
+                forward = Vector3.forward;
+
+            Quaternion rotation = Quaternion.LookRotation(forward, Vector3.up);
+
+            instance.transform.position = placePos;
+            instance.transform.rotation = rotation;
 
             Debug.Log($"Placed Flexit on surface: {instance.name}");
         }
@@ -75,6 +88,14 @@ public class FlexitItem : Item
             Debug.Log("Немає поверхні для розміщення");
         }
     }
+
+    public override bool IsBuildTool()
+    {
+        return true; // FlexitItem є інструментом для будівництва/руйнування
+    }
+
+
+
 
 
 }

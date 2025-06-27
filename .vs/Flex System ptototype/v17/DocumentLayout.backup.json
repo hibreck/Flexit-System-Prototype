@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\Games\\Unity_progects\\Flex System ptototype\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|d:\\games\\unity_progects\\flex system ptototype\\assets\\scripts\\invertory\\flexiticongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\invertory\\flexiticongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|d:\\games\\unity_progects\\flex system ptototype\\assets\\scripts\\invertory\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\invertory\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|d:\\games\\unity_progects\\flex system ptototype\\assets\\scripts\\invertory\\flexititem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|D:\\Games\\Unity_progects\\Flex System ptototype\\assets\\scripts\\invertory\\flexititem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\invertory\\flexititem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -114,11 +118,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "FlexitIconGenerator.cs",
+              "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Invertory\\FlexitIconGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Invertory\\FlexitIconGenerator.cs",
+              "ToolTip": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Invertory\\FlexitIconGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Invertory\\FlexitIconGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T10:32:24.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FlexitItem.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Invertory\\FlexitItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Invertory\\FlexitItem.cs",
@@ -126,12 +143,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Invertory\\FlexitItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T10:25:11.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T10:25:11.903Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
@@ -143,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "LootPickup.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Invertory\\Loot\\LootPickup.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Invertory\\Loot\\LootPickup.cs",
@@ -155,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Item.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Invertory\\Item.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Invertory\\Item.cs",
@@ -168,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PlayerInventory.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Invertory\\PlayerInventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Invertory\\PlayerInventory.cs",
@@ -180,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InventorySlot.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Invertory\\InventorySlot.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Invertory\\InventorySlot.cs",
@@ -192,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "IFlexitGizmo.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\IFlexitGizmo.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\IFlexitGizmo.cs",
@@ -204,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "FlexitGizmoManager.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoManager.cs",
@@ -216,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "FlexitGizmoPivot.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoPivot.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoPivot.cs",
@@ -228,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "FlexitGizmoRotate.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoRotate.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoRotate.cs",
@@ -240,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "FlexitGizmoPlaneScale.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoPlaneScale.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoPlaneScale.cs",
@@ -252,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "FlexitGizmoPlaneMove.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoPlaneMove.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoPlaneMove.cs",
@@ -264,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "AlwaysVisibleArrow.shader",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Resources\\Gismos_elements\\Materials_Gismo\\AlwaysVisibleArrow.shader",
               "RelativeDocumentMoniker": "Assets\\Resources\\Gismos_elements\\Materials_Gismo\\AlwaysVisibleArrow.shader",
@@ -276,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "GizmoInfoUI.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\GizmoInfoUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\GizmoInfoUI.cs",
@@ -288,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "FlexitGizmoScale.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoScale.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoScale.cs",
@@ -300,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "FlexitGizmoMove.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoMove.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoMove.cs",
@@ -312,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "HintUIManager.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\HintUIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\HintUIManager.cs",
@@ -324,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "FlexitAutoUV.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitAutoUV.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitAutoUV.cs",
@@ -336,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "EditModeManager.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\EditModeManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\EditModeManager.cs",
@@ -348,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "EditModeHighlighter.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\EditModeHighlighter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\EditModeHighlighter.cs",
@@ -360,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "EditableBlock.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\EditableBlock.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\EditableBlock.cs",
@@ -372,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "EditModeSelector.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\EditModeSelector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\EditModeSelector.cs",
@@ -384,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "TextureTileSizeAuthoring.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Authoring\\TextureTileSizeAuthoring.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Authoring\\TextureTileSizeAuthoring.cs",
@@ -396,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "UpdateTextureTileSizeSystem.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Systems\\UpdateTextureTileSizeSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Systems\\UpdateTextureTileSizeSystem.cs",
@@ -408,7 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "TextureTileSize.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Components\\TextureTileSize.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Components\\TextureTileSize.cs",
@@ -420,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "FlexitTiling.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Components\\FlexitTiling.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Components\\FlexitTiling.cs",

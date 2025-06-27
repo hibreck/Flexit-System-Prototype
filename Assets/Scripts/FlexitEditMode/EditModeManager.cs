@@ -91,6 +91,27 @@ public class EditModeManager : MonoBehaviour
 
     void Update()
     {
+        // Якщо в Edit Mode, то ЛКМ вихід з режиму
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            if (currentEditable == null)
+            {
+                // 🟩 Спроба знищити блок, якщо не в Edit Mode
+                var inventory = FindAnyObjectByType<PlayerInventory>();
+                if (inventory != null)
+                {
+                    var slot = inventory.slots[inventory.activeSlot];
+                    if (slot.item == null || slot.item.IsBuildTool())
+                    {
+                        FlexitDestroyer.TryDestroyFlexitFromCamera();
+                    }
+
+                }
+            }
+
+            return; // Щоб не дублювати логіку далі
+        }
+
         if (leftClickAction.action.WasPressedThisFrame())
         {
             Ray ray = playerCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
