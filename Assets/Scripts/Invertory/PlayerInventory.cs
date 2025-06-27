@@ -163,7 +163,8 @@ public class PlayerInventory : MonoBehaviour
             else
             {
                 slotImages[i].sprite = null;
-                slotImages[i].color = new Color(1, 1, 1, 0.2f);
+                slotImages[i].color = new Color(1, 1, 1, 0f);
+
             }
 
             if (slotCounts != null && slotCounts.Length > i)
@@ -191,7 +192,7 @@ public class PlayerInventory : MonoBehaviour
             activeSlotBorder.SetParent(slotRects[activeSlot].parent, false);
             activeSlotBorder.localPosition = slotRects[activeSlot].localPosition;
             activeSlotBorder.sizeDelta = slotRects[activeSlot].sizeDelta;
-            Debug.Log($"Move border to slot {activeSlot}: {slotRects[activeSlot].localPosition}");
+            
         }
     }
 }
