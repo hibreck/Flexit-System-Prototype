@@ -374,8 +374,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 26
+    x: -1042
+    y: -576
     width: 1034
     height: 758
   m_SerializedDataModeController:
@@ -475,8 +475,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 342
-    y: 24
+    x: 341
+    y: 79
     width: 1101
     height: 639
   m_SerializedDataModeController:
@@ -935,9 +935,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 13.881228, y: -18.815397, z: 0.9510509}
+    m_Target: {x: -11.318885, y: -10.985821, z: -3.560565}
     speed: 2
-    m_Value: {x: 13.881228, y: -18.815397, z: 0.9510509}
+    m_Value: {x: -11.318885, y: -10.985821, z: -3.560565}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -983,13 +983,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.41546574, y: -0.4126674, z: 0.21962804, w: -0.7801179}
+    m_Target: {x: 0.13988401, y: -0.8397841, z: 0.2573421, w: 0.45685247}
     speed: 2
-    m_Value: {x: 0.41546577, y: 0.4126674, z: -0.21962805, w: 0.780118}
+    m_Value: {x: 0.13990192, y: -0.8398916, z: 0.25737506, w: 0.45691097}
   m_Size:
-    m_Target: 12.124355
+    m_Target: 12.026446
     speed: 2
-    m_Value: 12.124355
+    m_Value: 12.026446
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 24
+    y: 79
     width: 340
     height: 639
   m_SerializedDataModeController:
@@ -1064,7 +1064,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ccf6fdff1ef7fdff72f7fdffc4f7fdff2af8fdff1ef9fdff5a05ffff38faffff44faffff50faffff5cfaffff68faffff72faffff18fbffff68c80000
+      m_ExpandedIDs: 18fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 689
+    y: 744
     width: 1443
     height: 242
   m_SerializedDataModeController:
@@ -1136,7 +1136,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Invenrtory
+    - Assets/Scripts/Flexit
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1146,16 +1146,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Invenrtory
+  - Assets/Scripts/Flexit
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Games\Unity_progects\Flex System ptototype
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 498}
-    m_SelectedIDs: bccc0000
-    m_LastClickedID: 52412
-    m_ExpandedIDs: 00000000d0cb0000d2cb0000d4cb0000d6cb0000d8cb0000dacb0000dccb0000decb0000e0cb0000e2cb0000e4cb0000e6cb0000
+    m_SelectedIDs: 82cc0000
+    m_LastClickedID: 52354
+    m_ExpandedIDs: 00000000d0cb0000d2cb0000d4cb0000d6cb0000d8cb0000dacb0000dccb0000decb0000e0cb0000e2cb0000e4cb0000e6cb000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1299,8 +1299,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1445
-    y: 24
+    x: 1444
+    y: 79
     width: 475
     height: 907
   m_SerializedDataModeController:

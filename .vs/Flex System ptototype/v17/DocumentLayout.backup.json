@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\Games\\Unity_progects\\Flex System ptototype\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|d:\\games\\unity_progects\\flex system ptototype\\assets\\scripts\\flexit\\flexitedgevisualizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\flexit\\flexitedgevisualizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|d:\\games\\unity_progects\\flex system ptototype\\assets\\scripts\\flexit\\flexitpreviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\flexit\\flexitpreviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|d:\\games\\unity_progects\\flex system ptototype\\assets\\scripts\\flexit\\flexitplacementutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|D:\\Games\\Unity_progects\\Flex System ptototype\\assets\\scripts\\flexit\\flexitplacementutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\flexit\\flexitplacementutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\invenrtory\\flexititem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|d:\\games\\unity_progects\\flex system ptototype\\assets\\scripts\\player\\playervision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|D:\\Games\\Unity_progects\\Flex System ptototype\\assets\\scripts\\player\\playervision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playervision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\flexiteditmode\\editmodeselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|d:\\games\\unity_progects\\flex system ptototype\\assets\\scripts\\invenrtory\\flexitdestroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|D:\\Games\\Unity_progects\\Flex System ptototype\\assets\\scripts\\invenrtory\\flexitdestroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\invenrtory\\flexitdestroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -57,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|D:\\Games\\Unity_progects\\Flex System ptototype\\assets\\scripts\\invenrtory\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\invenrtory\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Player\\FlexitPreviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Player\\FlexitPreviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD53451E-40C5-7AB3-794D-D8F40D869FA3}|Assembly-CSharp.csproj|D:\\Games\\Unity_progects\\Flex System ptototype\\assets\\scripts\\flexiteditmode\\editmodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,11 +122,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "FlexitEdgeVisualizer.cs",
+              "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Flexit\\FlexitEdgeVisualizer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Flexit\\FlexitEdgeVisualizer.cs",
+              "ToolTip": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Flexit\\FlexitEdgeVisualizer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Flexit\\FlexitEdgeVisualizer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T19:42:13.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PlayerVision.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Player\\PlayerVision.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerVision.cs",
@@ -134,12 +147,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerVision.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T18:54:27.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T18:54:27.812Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FlexitDestroyer.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Invenrtory\\FlexitDestroyer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Invenrtory\\FlexitDestroyer.cs",
@@ -147,38 +159,37 @@
               "RelativeToolTip": "Assets\\Scripts\\Invenrtory\\FlexitDestroyer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T18:43:48.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T18:43:48.43Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FlexitPreviewer.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Flexit\\FlexitPreviewer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Flexit\\FlexitPreviewer.cs",
               "ToolTip": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Flexit\\FlexitPreviewer.cs",
               "RelativeToolTip": "Assets\\Scripts\\Flexit\\FlexitPreviewer.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAwwLEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAvwFsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-27T15:39:09.556Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FlexitPlacementUtility.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Flexit\\FlexitPlacementUtility.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Flexit\\FlexitPlacementUtility.cs",
               "ToolTip": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Flexit\\FlexitPlacementUtility.cs",
               "RelativeToolTip": "Assets\\Scripts\\Flexit\\FlexitPlacementUtility.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAkwKgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-27T15:38:15.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "PlayerInventory.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Invenrtory\\PlayerInventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Invenrtory\\PlayerInventory.cs",
@@ -186,23 +197,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Invenrtory\\PlayerInventory.cs",
               "ViewState": "AgIAAIEAAAAAAAAAAAAYwJwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T15:05:40.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T15:05:40.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FlexitPreviewer.cs",
-              "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Player\\FlexitPreviewer.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\FlexitPreviewer.cs",
-              "ToolTip": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Player\\FlexitPreviewer.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\FlexitPreviewer.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T14:50:19.945Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FlexitItem.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\Invenrtory\\FlexitItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Invenrtory\\FlexitItem.cs",
@@ -210,8 +209,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Invenrtory\\FlexitItem.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAwwE0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T14:41:58.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T14:41:58.962Z"
             },
             {
               "$type": "Document",
@@ -239,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "FlexitGizmoManager.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoManager.cs",
@@ -247,12 +245,11 @@
               "RelativeToolTip": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoManager.cs",
               "ViewState": "AgIAAHYAAAAAAAAAAAAkwIkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T09:38:43.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T09:38:43.581Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "FlexitGizmoPivot.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoPivot.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoPivot.cs",
@@ -260,12 +257,11 @@
               "RelativeToolTip": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoPivot.cs",
               "ViewState": "AgIAABgBAAAAAAAAAAAkwDQBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:55:12.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T18:55:12.773Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "FlexitGizmoRotate.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoRotate.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoRotate.cs",
@@ -273,8 +269,7 @@
               "RelativeToolTip": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoRotate.cs",
               "ViewState": "AgIAAJkAAAAAAAAAAAAwwKsAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T11:52:17.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T11:52:17.49Z"
             },
             {
               "$type": "Document",
@@ -314,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "GizmoInfoUI.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\GizmoInfoUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\GizmoInfoUI.cs",
@@ -322,12 +317,11 @@
               "RelativeToolTip": "Assets\\Scripts\\FlexitEditMode\\GizmoInfoUI.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAowKoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T17:02:05.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T17:02:05.01Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "FlexitGizmoScale.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoScale.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoScale.cs",
@@ -335,12 +329,11 @@
               "RelativeToolTip": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoScale.cs",
               "ViewState": "AgIAAJAAAAAAAAAAAAAwwJ8AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T15:32:14.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T15:32:14.601Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "FlexitGizmoMove.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\FlexitGizmoMove.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoMove.cs",
@@ -348,12 +341,11 @@
               "RelativeToolTip": "Assets\\Scripts\\FlexitEditMode\\FlexitGizmoMove.cs",
               "ViewState": "AgIAAFYBAAAAAAAAAAAwwH0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T15:03:14.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T15:03:14.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "HintUIManager.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\HintUIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\HintUIManager.cs",
@@ -361,8 +353,7 @@
               "RelativeToolTip": "Assets\\Scripts\\FlexitEditMode\\HintUIManager.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAEwCUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T18:56:21.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T18:56:21.184Z"
             },
             {
               "$type": "Document",
@@ -410,12 +401,11 @@
               "RelativeToolTip": "Assets\\Scripts\\FlexitEditMode\\EditableBlock.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAwwFkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T14:22:10.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T14:22:10.081Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "EditModeSelector.cs",
               "DocumentMoniker": "D:\\Games\\Unity_progects\\Flex System ptototype\\Assets\\Scripts\\FlexitEditMode\\EditModeSelector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlexitEditMode\\EditModeSelector.cs",
@@ -423,8 +413,7 @@
               "RelativeToolTip": "Assets\\Scripts\\FlexitEditMode\\EditModeSelector.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T10:38:42.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T10:38:42.028Z"
             },
             {
               "$type": "Document",
