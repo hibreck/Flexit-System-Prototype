@@ -1,0 +1,31 @@
+# Unity-generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+*.csproj
+*.sln
+*.user
+.idea/
+
+# Unity cache
+*.pidb
+*.booproj
+*.suo
+
+# Auto-generated
+*.apk
+*.aab
+*.unitypackage
+*.tmp
+*.log

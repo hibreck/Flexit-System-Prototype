@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c13de8b4b043dab4ca6750c1b2c4765d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - redHandlePrefab: {fileID: 3963950850228129273, guid: 913d2aca9c085cc41a93c9b55c0cbb9b, type: 3}
+  - greenHandlePrefab: {fileID: 643678223692072650, guid: 8f581e110700fad4996228bc58c831ac, type: 3}
+  - blueHandlePrefab: {fileID: 6627711377128796445, guid: 63c272036d1562542b7f8eaddee70167, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
