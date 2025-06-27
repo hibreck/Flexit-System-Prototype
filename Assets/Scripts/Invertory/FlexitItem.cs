@@ -1,5 +1,7 @@
-using System.Collections.Generic;
+п»їusing System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 [CreateAssetMenu(menuName = "Items/FlexitItem")]
 public class FlexitItem : Item
@@ -9,15 +11,23 @@ public class FlexitItem : Item
 
     public override Dictionary<string, int> GetStats()
     {
-        // Можна додати кастомні характеристики блоку
+        // РњРѕР¶РЅР° РґРѕРґР°С‚Рё РєР°СЃС‚РѕРјРЅС– С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё Р±Р»РѕРєСѓ
         return new Dictionary<string, int>
         {
-            { "buildable", 1 } // для UI-підказок, умов у грі тощо
+            { "buildable", 1 } // РґР»СЏ UI-РїС–РґРєР°Р·РѕРє, СѓРјРѕРІ Сѓ РіСЂС– С‚РѕС‰Рѕ
         };
     }
 
     public override void Use(GameObject user)
     {
+        // в›” РќРµ СЃС‚Р°РІРёС‚Рё, СЏРєС‰Рѕ Alt Р·Р°С‚РёСЃРЅСѓС‚РёР№
+        if (Keyboard.current != null &&
+            (Keyboard.current.leftAltKey.isPressed || Keyboard.current.rightAltKey.isPressed))
+        {
+            Debug.Log("Alt Р·Р°С‚РёСЃРЅСѓС‚РёР№ вЂ” Р±Р»РѕРє РЅРµ Р±СѓРґРµ РІСЃС‚Р°РЅРѕРІР»РµРЅРѕ.");
+            return;
+        }
+
         if (flexitPrefab == null)
         {
             Debug.LogWarning("flexitPrefab is not assigned.");
@@ -33,31 +43,26 @@ public class FlexitItem : Item
 
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, 5f)) // 10f — дальність установки
+        if (Physics.Raycast(ray, out RaycastHit hit, 5f))
         {
-            // Заборона установки на гравця
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
-                Debug.Log("Не можна встановити на гравця");
+                Debug.Log("РќРµ РјРѕР¶РЅР° РІСЃС‚Р°РЅРѕРІРёС‚Рё РЅР° РіСЂР°РІС†СЏ");
                 return;
             }
 
             GameObject instance = Object.Instantiate(flexitPrefab);
             instance.name = flexitPrefab.name;
 
-            // Знаходимо точку на поверхні інстанса, яка буде в хіті
             Collider instanceCollider = instance.GetComponent<Collider>();
             if (instanceCollider != null)
             {
-                // Розрахунок позиції з урахуванням форми об’єкта
                 Vector3 pointOnSurface = instanceCollider.ClosestPoint(hit.point - hit.normal * 10f);
                 Vector3 offset = instance.transform.position - pointOnSurface;
-
                 instance.transform.position = hit.point + offset;
             }
             else
             {
-                // Якщо немає колайдера — просто ставимо у точку
                 instance.transform.position = hit.point;
             }
 
@@ -67,8 +72,9 @@ public class FlexitItem : Item
         }
         else
         {
-            Debug.Log("Немає поверхні для розміщення");
+            Debug.Log("РќРµРјР°С” РїРѕРІРµСЂС…РЅС– РґР»СЏ СЂРѕР·РјС–С‰РµРЅРЅСЏ");
         }
     }
+
 
 }

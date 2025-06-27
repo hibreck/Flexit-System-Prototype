@@ -1168,7 +1168,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "EditModeShift",
+                    "name": "EditModeEnter",
                     "type": "Button",
                     "id": "487a6f54-6a57-4f98-9583-a50560a8c6ca",
                     "expectedControlType": "",
@@ -1177,7 +1177,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "EditModeRMouse",
+                    "name": "EditModeEnterMouse",
                     "type": "Button",
                     "id": "e5e3d584-1140-4880-a206-1be43b1bd29d",
                     "expectedControlType": "",
@@ -1291,11 +1291,11 @@
                 {
                     "name": "",
                     "id": "d734872f-6256-4d9e-93a7-6e13863640f4",
-                    "path": "<Keyboard>/leftShift",
+                    "path": "<Keyboard>/leftAlt",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "EditModeShift",
+                    "action": "EditModeEnter",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1306,7 +1306,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "EditModeRMouse",
+                    "action": "EditModeEnterMouse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

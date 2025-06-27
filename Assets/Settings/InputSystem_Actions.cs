@@ -1254,7 +1254,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""EditModeShift"",
+                    ""name"": ""EditModeEnter"",
                     ""type"": ""Button"",
                     ""id"": ""487a6f54-6a57-4f98-9583-a50560a8c6ca"",
                     ""expectedControlType"": """",
@@ -1263,7 +1263,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""EditModeRMouse"",
+                    ""name"": ""EditModeEnterMouse"",
                     ""type"": ""Button"",
                     ""id"": ""e5e3d584-1140-4880-a206-1be43b1bd29d"",
                     ""expectedControlType"": """",
@@ -1377,11 +1377,11 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d734872f-6256-4d9e-93a7-6e13863640f4"",
-                    ""path"": ""<Keyboard>/leftShift"",
+                    ""path"": ""<Keyboard>/leftAlt"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""EditModeShift"",
+                    ""action"": ""EditModeEnter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1392,7 +1392,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""EditModeRMouse"",
+                    ""action"": ""EditModeEnterMouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1649,8 +1649,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         // EditMode
         m_EditMode = asset.FindActionMap("EditMode", throwIfNotFound: true);
         m_EditMode_EditExit = m_EditMode.FindAction("EditExit", throwIfNotFound: true);
-        m_EditMode_EditModeShift = m_EditMode.FindAction("EditModeShift", throwIfNotFound: true);
-        m_EditMode_EditModeRMouse = m_EditMode.FindAction("EditModeRMouse", throwIfNotFound: true);
+        m_EditMode_EditModeEnter = m_EditMode.FindAction("EditModeEnter", throwIfNotFound: true);
+        m_EditMode_EditModeEnterMouse = m_EditMode.FindAction("EditModeEnterMouse", throwIfNotFound: true);
         m_EditMode_HandleControl = m_EditMode.FindAction("HandleControl", throwIfNotFound: true);
         m_EditMode_ResetScale = m_EditMode.FindAction("ResetScale", throwIfNotFound: true);
         m_EditMode_EditScrollDelta = m_EditMode.FindAction("EditScrollDelta", throwIfNotFound: true);
@@ -2264,8 +2264,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_EditMode;
     private List<IEditModeActions> m_EditModeActionsCallbackInterfaces = new List<IEditModeActions>();
     private readonly InputAction m_EditMode_EditExit;
-    private readonly InputAction m_EditMode_EditModeShift;
-    private readonly InputAction m_EditMode_EditModeRMouse;
+    private readonly InputAction m_EditMode_EditModeEnter;
+    private readonly InputAction m_EditMode_EditModeEnterMouse;
     private readonly InputAction m_EditMode_HandleControl;
     private readonly InputAction m_EditMode_ResetScale;
     private readonly InputAction m_EditMode_EditScrollDelta;
@@ -2292,13 +2292,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @EditExit => m_Wrapper.m_EditMode_EditExit;
         /// <summary>
-        /// Provides access to the underlying input action "EditMode/EditModeShift".
+        /// Provides access to the underlying input action "EditMode/EditModeEnter".
         /// </summary>
-        public InputAction @EditModeShift => m_Wrapper.m_EditMode_EditModeShift;
+        public InputAction @EditModeEnter => m_Wrapper.m_EditMode_EditModeEnter;
         /// <summary>
-        /// Provides access to the underlying input action "EditMode/EditModeRMouse".
+        /// Provides access to the underlying input action "EditMode/EditModeEnterMouse".
         /// </summary>
-        public InputAction @EditModeRMouse => m_Wrapper.m_EditMode_EditModeRMouse;
+        public InputAction @EditModeEnterMouse => m_Wrapper.m_EditMode_EditModeEnterMouse;
         /// <summary>
         /// Provides access to the underlying input action "EditMode/HandleControl".
         /// </summary>
@@ -2368,12 +2368,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @EditExit.started += instance.OnEditExit;
             @EditExit.performed += instance.OnEditExit;
             @EditExit.canceled += instance.OnEditExit;
-            @EditModeShift.started += instance.OnEditModeShift;
-            @EditModeShift.performed += instance.OnEditModeShift;
-            @EditModeShift.canceled += instance.OnEditModeShift;
-            @EditModeRMouse.started += instance.OnEditModeRMouse;
-            @EditModeRMouse.performed += instance.OnEditModeRMouse;
-            @EditModeRMouse.canceled += instance.OnEditModeRMouse;
+            @EditModeEnter.started += instance.OnEditModeEnter;
+            @EditModeEnter.performed += instance.OnEditModeEnter;
+            @EditModeEnter.canceled += instance.OnEditModeEnter;
+            @EditModeEnterMouse.started += instance.OnEditModeEnterMouse;
+            @EditModeEnterMouse.performed += instance.OnEditModeEnterMouse;
+            @EditModeEnterMouse.canceled += instance.OnEditModeEnterMouse;
             @HandleControl.started += instance.OnHandleControl;
             @HandleControl.performed += instance.OnHandleControl;
             @HandleControl.canceled += instance.OnHandleControl;
@@ -2418,12 +2418,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @EditExit.started -= instance.OnEditExit;
             @EditExit.performed -= instance.OnEditExit;
             @EditExit.canceled -= instance.OnEditExit;
-            @EditModeShift.started -= instance.OnEditModeShift;
-            @EditModeShift.performed -= instance.OnEditModeShift;
-            @EditModeShift.canceled -= instance.OnEditModeShift;
-            @EditModeRMouse.started -= instance.OnEditModeRMouse;
-            @EditModeRMouse.performed -= instance.OnEditModeRMouse;
-            @EditModeRMouse.canceled -= instance.OnEditModeRMouse;
+            @EditModeEnter.started -= instance.OnEditModeEnter;
+            @EditModeEnter.performed -= instance.OnEditModeEnter;
+            @EditModeEnter.canceled -= instance.OnEditModeEnter;
+            @EditModeEnterMouse.started -= instance.OnEditModeEnterMouse;
+            @EditModeEnterMouse.performed -= instance.OnEditModeEnterMouse;
+            @EditModeEnterMouse.canceled -= instance.OnEditModeEnterMouse;
             @HandleControl.started -= instance.OnHandleControl;
             @HandleControl.performed -= instance.OnHandleControl;
             @HandleControl.canceled -= instance.OnHandleControl;
@@ -2759,19 +2759,19 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnEditExit(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "EditModeShift" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "EditModeEnter" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnEditModeShift(InputAction.CallbackContext context);
+        void OnEditModeEnter(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "EditModeRMouse" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "EditModeEnterMouse" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnEditModeRMouse(InputAction.CallbackContext context);
+        void OnEditModeEnterMouse(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "HandleControl" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

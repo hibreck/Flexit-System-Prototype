@@ -16,8 +16,12 @@ public class EditModeManager : MonoBehaviour
     private EditableBlock currentEditable;
     private InputAction resetAction;
 
+    public static EditModeManager Instance { get; private set; }
+    public bool IsEditModeActive => currentEditable != null;
+
     private void Awake()
     {
+        Instance = this;
         FindBindHelpText();
 
         // Якщо gizmoManager не встановлено через інспектор, шукаємо в сцені

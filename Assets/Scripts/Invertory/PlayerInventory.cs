@@ -46,6 +46,7 @@ public class PlayerInventory : MonoBehaviour
     private InputAction useActiveSlotAction;
 
     private Coroutine nameDisplayCoroutine;
+    public bool IsInEditMode = false;
 
     private void Awake()
     {
@@ -103,6 +104,13 @@ public class PlayerInventory : MonoBehaviour
 
     public void OnScrollSlot(InputAction.CallbackContext ctx)
     {
+        if (EditModeManager.Instance != null && EditModeManager.Instance.IsEditModeActive)
+        {
+            
+            return;
+        }
+
+
         float scroll = ctx.ReadValue<float>();
         if (scroll > 0f)
             SetActiveSlot((activeSlot - 1 + slots.Length) % slots.Length);

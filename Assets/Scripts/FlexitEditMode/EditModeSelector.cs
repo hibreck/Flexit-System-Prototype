@@ -5,28 +5,28 @@ using UnityEngine;
 public class EditModeSelector : MonoBehaviour
 {
     [SerializeField] private PlayerVision vision;
-    [SerializeField] private InputActionReference shiftAction;
-    [SerializeField] private InputActionReference rightClickAction;
+    [SerializeField] private InputActionReference enterEditmodeAction1;
+    [SerializeField] private InputActionReference enterEditmodeActionMouse;
 
     
 
     private void OnEnable()
     {
-        shiftAction.action.Enable();
-        rightClickAction.action.Enable();
-        rightClickAction.action.performed += OnRightClick;
+        enterEditmodeAction1.action.Enable();
+        enterEditmodeActionMouse.action.Enable();
+        enterEditmodeActionMouse.action.performed += OnRightClick;
     }
 
     private void OnDisable()
     {
-        rightClickAction.action.performed -= OnRightClick;
-        shiftAction.action.Disable();
-        rightClickAction.action.Disable();
+        enterEditmodeActionMouse.action.performed -= OnRightClick;
+        enterEditmodeAction1.action.Disable();
+        enterEditmodeActionMouse.action.Disable();
     }
 
     private void OnRightClick(InputAction.CallbackContext context)
     {
-        if (!shiftAction.action.IsPressed()) return;
+        if (!enterEditmodeAction1.action.IsPressed()) return;
 
         var editable = vision.CurrentlyLookedObject?.GetComponent<EditableBlock>();
         if (editable == null) return;
