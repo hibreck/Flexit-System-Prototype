@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 
@@ -37,7 +37,7 @@ public class FlexitGizmoScale : MonoBehaviour
 
 
 
-    // Для драггінгу
+    // Р”Р»СЏ РґСЂР°РіРіС–РЅРіСѓ
     private bool isDragging = false;
     private GameObject activeHandle = null;
     private Vector3 initialMouseWorldPos;
@@ -153,11 +153,11 @@ public class FlexitGizmoScale : MonoBehaviour
     {
         if (isScaleActive)
         {
-            // Якщо зараз масштабування, не оновлюємо позицію хендлів тут
+            // РЇРєС‰Рѕ Р·Р°СЂР°Р· РјР°СЃС€С‚Р°Р±СѓРІР°РЅРЅСЏ, РЅРµ РѕРЅРѕРІР»СЋС”РјРѕ РїРѕР·РёС†С–СЋ С…РµРЅРґР»С–РІ С‚СѓС‚
             return;
         }
         UpdateHandles();
-        if (FlexitGizmoManager.Instance.CurrentMode != GizmoMode.Scale) return; // або Move / RotatePivot
+        if (FlexitGizmoManager.Instance.CurrentMode != GizmoMode.Scale) return; // Р°Р±Рѕ Move / RotatePivot
 
 
         if (handleControlAction == null) return;
@@ -199,7 +199,7 @@ public class FlexitGizmoScale : MonoBehaviour
         float yRotation = target.eulerAngles.y;
         Quaternion yRot = Quaternion.Euler(0f, yRotation, 0f);
         customRight = yRot * Vector3.right;
-        customUp = Vector3.up;  // завжди світовий up
+        customUp = Vector3.up;  // Р·Р°РІР¶РґРё СЃРІС–С‚РѕРІРёР№ up
         customForward = yRot * Vector3.forward;
     }
     private void TryStartDrag()
@@ -208,10 +208,10 @@ public class FlexitGizmoScale : MonoBehaviour
 
         Ray ray = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-        // Маска для шару GizmoHandle
+        // РњР°СЃРєР° РґР»СЏ С€Р°СЂСѓ GizmoHandle
         int gizmoLayerMask = 1 << LayerMask.NameToLayer("GizmoHandle");
 
-        // RaycastAll дозволяє знайти хендл навіть через блоки
+        // RaycastAll РґРѕР·РІРѕР»СЏС” Р·РЅР°Р№С‚Рё С…РµРЅРґР» РЅР°РІС–С‚СЊ С‡РµСЂРµР· Р±Р»РѕРєРё
         RaycastHit[] hits = Physics.RaycastAll(ray, Mathf.Infinity, gizmoLayerMask);
 
         foreach (var hit in hits)
@@ -235,11 +235,11 @@ public class FlexitGizmoScale : MonoBehaviour
         activeHandle = handle;
        
 
-        // Вимикаємо показ позиції UI (якщо це потрібно)
+        // Р’РёРјРёРєР°С”РјРѕ РїРѕРєР°Р· РїРѕР·РёС†С–С— UI (СЏРєС‰Рѕ С†Рµ РїРѕС‚СЂС–Р±РЅРѕ)
         if (gizmoInfoUI != null)
         {
             gizmoInfoUI.ClearExcept(GizmoInfoUI.GizmoInfoType.Scale);
-            // або, якщо потрібно, додатково gizmoInfoUI.HidePositionInfo();
+            // Р°Р±Рѕ, СЏРєС‰Рѕ РїРѕС‚СЂС–Р±РЅРѕ, РґРѕРґР°С‚РєРѕРІРѕ gizmoInfoUI.HidePositionInfo();
         }
 
         initialTargetScale = target.localScale;
@@ -254,7 +254,7 @@ public class FlexitGizmoScale : MonoBehaviour
         }
         else
         {
-            // Якщо не вдалось - просто поставимо початкову позицію миші як позицію об'єкта
+            // РЇРєС‰Рѕ РЅРµ РІРґР°Р»РѕСЃСЊ - РїСЂРѕСЃС‚Рѕ РїРѕСЃС‚Р°РІРёРјРѕ РїРѕС‡Р°С‚РєРѕРІСѓ РїРѕР·РёС†С–СЋ РјРёС€С– СЏРє РїРѕР·РёС†С–СЋ РѕР±'С”РєС‚Р°
             initialMouseWorldPos = target.position;
         }
     }
@@ -270,7 +270,7 @@ public class FlexitGizmoScale : MonoBehaviour
         Vector3 currentMouseWorldPos = ray.GetPoint(enter);
         Vector3 deltaWorld = currentMouseWorldPos - initialMouseWorldPos;
 
-        // Використовуємо локальні вектори target для врахування поворотів по будь-яких осях
+        // Р’РёРєРѕСЂРёСЃС‚РѕРІСѓС”РјРѕ Р»РѕРєР°Р»СЊРЅС– РІРµРєС‚РѕСЂРё target РґР»СЏ РІСЂР°С…СѓРІР°РЅРЅСЏ РїРѕРІРѕСЂРѕС‚С–РІ РїРѕ Р±СѓРґСЊ-СЏРєРёС… РѕСЃСЏС…
         Vector3 right = target.right;
         Vector3 up = target.up;
         Vector3 forward = target.forward;
@@ -320,11 +320,11 @@ public class FlexitGizmoScale : MonoBehaviour
         float delta;
         if (shiftAction != null && shiftAction.IsPressed())
         {
-            delta = deltaRaw; // плавне масштабування
+            delta = deltaRaw; // РїР»Р°РІРЅРµ РјР°СЃС€С‚Р°Р±СѓРІР°РЅРЅСЏ
         }
         else
         {
-            delta = Mathf.Round(deltaRaw / pixelStep) * pixelStep; // крокове масштабування
+            delta = Mathf.Round(deltaRaw / pixelStep) * pixelStep; // РєСЂРѕРєРѕРІРµ РјР°СЃС€С‚Р°Р±СѓРІР°РЅРЅСЏ
         }
 
         Vector3 newScale = initialTargetScale;
@@ -340,7 +340,7 @@ public class FlexitGizmoScale : MonoBehaviour
             newScale = new Vector3(newX, newY, newZ);
 
             target.localScale = newScale;
-            // При пропорційному масштабуванні позицію не змінюємо
+            // РџСЂРё РїСЂРѕРїРѕСЂС†С–Р№РЅРѕРјСѓ РјР°СЃС€С‚Р°Р±СѓРІР°РЅРЅС– РїРѕР·РёС†С–СЋ РЅРµ Р·РјС–РЅСЋС”РјРѕ
             return;
         }
         else
@@ -355,7 +355,7 @@ public class FlexitGizmoScale : MonoBehaviour
 
         Vector3 scaleDiff = newScale - initialTargetScale;
 
-        // Зсув позиції — без множення на 0.5f, повний зсув у напрямку осі та активного хендла
+        // Р—СЃСѓРІ РїРѕР·РёС†С–С— вЂ” Р±РµР· РјРЅРѕР¶РµРЅРЅСЏ РЅР° 0.5f, РїРѕРІРЅРёР№ Р·СЃСѓРІ Сѓ РЅР°РїСЂСЏРјРєСѓ РѕСЃС– С‚Р° Р°РєС‚РёРІРЅРѕРіРѕ С…РµРЅРґР»Р°
         Vector3 positionOffset = axis * scaleDiff[(axis == right) ? 0 : (axis == up ? 1 : 2)] * 0.5f * direction;
 
 
@@ -387,12 +387,16 @@ public class FlexitGizmoScale : MonoBehaviour
     }
     public void HandleScroll(Vector2 scrollDelta)
     {
+        // вќЊ Alt Р·Р°С‚РёСЃРЅСѓС‚РёР№ вЂ” РІРёС…РѕРґРёРјРѕ
+        if (Keyboard.current != null && Keyboard.current.altKey.isPressed)
+            return;
+
         if (target == null || cam == null) return;
 
         float scrollAmount = scrollDelta.y;
         if (Mathf.Abs(scrollAmount) < 0.01f) return;
 
-        // Оновлюємо кастомні осі
+        // РћРЅРѕРІР»СЋС”РјРѕ РєР°СЃС‚РѕРјРЅС– РѕСЃС–
         UpdateCustomVectorsByYRotation();
 
         Vector3 camForward = cam.transform.forward.normalized;
@@ -400,7 +404,7 @@ public class FlexitGizmoScale : MonoBehaviour
         int selectedAxis = -1;
         float maxDot = -1f;
 
-        // Визначаємо, яка вісь найближча до погляду камери
+        // Р’РёР·РЅР°С‡Р°С”РјРѕ, СЏРєР° РІС–СЃСЊ РЅР°Р№Р±Р»РёР¶С‡Р° РґРѕ РїРѕРіР»СЏРґСѓ РєР°РјРµСЂРё
         for (int i = 0; i < axes.Length; i++)
         {
             float dot = Mathf.Abs(Vector3.Dot(camForward, axes[i]));
@@ -480,7 +484,7 @@ public class FlexitGizmoScale : MonoBehaviour
         float baseHandleOffset = 0.5f;
         float baseHandleScale = 0.1f;
 
-        // Повні локальні осі (враховують усі повороти)
+        // РџРѕРІРЅС– Р»РѕРєР°Р»СЊРЅС– РѕСЃС– (РІСЂР°С…РѕРІСѓСЋС‚СЊ СѓСЃС– РїРѕРІРѕСЂРѕС‚Рё)
         Vector3 right = target.right.normalized;
         Vector3 up = target.up.normalized;
         Vector3 forward = target.forward.normalized;
@@ -525,7 +529,7 @@ public class FlexitGizmoScale : MonoBehaviour
         if (!visible) return;
 
         handle.transform.position = position;
-        handle.transform.rotation = Quaternion.LookRotation(axis, upHint); // ключовий момент!
+        handle.transform.rotation = Quaternion.LookRotation(axis, upHint); // РєР»СЋС‡РѕРІРёР№ РјРѕРјРµРЅС‚!
         handle.transform.localScale = scale;
     }
 
@@ -577,7 +581,7 @@ public class FlexitGizmoScale : MonoBehaviour
         Debug.Log($"Reset scale action triggered in {this.GetType().Name} at frame {Time.frameCount}");
         if (target == null) return;
 
-        float pixelStep = 4f / 64f; // або 0.06f, якщо ти округляєш
+        float pixelStep = 4f / 64f; // Р°Р±Рѕ 0.06f, СЏРєС‰Рѕ С‚Рё РѕРєСЂСѓРіР»СЏС”С€
 
         Vector3 scale = target.localScale;
 
