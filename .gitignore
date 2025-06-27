@@ -34,3 +34,4 @@ Thumbs.db
 .vs/Flex System ptototype/FileContentIndex/c2ed65aa-0541-4385-95d7-3614337dadd5.vsidx
 .vs/Flex System ptototype/FileContentIndex/14633938-cb50-4029-85dc-6e68998faea7.vsidx
 /.vs
+*.db
