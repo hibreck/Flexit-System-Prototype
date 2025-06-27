@@ -20,7 +20,6 @@ public class FlexitItem : Item
 
     public override void Use(GameObject user)
     {
-        // ⛔ Не ставити, якщо Alt затиснутий
         if (Keyboard.current != null &&
             (Keyboard.current.leftAltKey.isPressed || Keyboard.current.rightAltKey.isPressed))
         {
@@ -54,29 +53,60 @@ public class FlexitItem : Item
             GameObject instance = Object.Instantiate(flexitPrefab);
             instance.name = flexitPrefab.name;
 
-            Collider instanceCollider = instance.GetComponent<Collider>();
+            // Орієнтація
+            Quaternion rotation;
+            float verticalDot = Vector3.Dot(hit.normal, Vector3.up);
 
-            Vector3 placePos;
-            if (instanceCollider != null)
+            if (Mathf.Abs(verticalDot) > 0.9f)
             {
-                Vector3 pointOnSurface = instanceCollider.ClosestPoint(hit.point - hit.normal * 10f);
-                Vector3 offset = instance.transform.position - pointOnSurface;
-                placePos = hit.point + offset;
+                // Горизонтальна поверхня (підлога або стеля) — орієнтація по камері по Y
+                Vector3 forward = cam.transform.forward;
+                forward.y = 0f;
+                forward.Normalize();
+                if (forward.sqrMagnitude < 0.001f)
+                    forward = Vector3.forward;
+
+                rotation = Quaternion.LookRotation(forward, Vector3.up);
             }
             else
             {
-                placePos = hit.point;
+                // Бокова поверхня — орієнтація за нормаллю
+                Vector3 forward = -hit.normal;
+                rotation = Quaternion.LookRotation(forward, Vector3.up);
             }
 
-            // Визначаємо горизонтальний напрямок камери (ігноруємо Y)
-            Vector3 forward = cam.transform.forward;
-            forward.y = 0f;
-            forward.Normalize();
+            // Позиція
+            Vector3 placePos;
+            if (Mathf.Abs(verticalDot) > 0.9f)
+            {
+                // Підлога або стеля — точне прилягання
+                Collider instanceCollider = instance.GetComponent<Collider>();
+                if (instanceCollider != null)
+                {
+                    Vector3 pointOnSurface = instanceCollider.ClosestPoint(hit.point - hit.normal * 10f);
+                    Vector3 offset = instance.transform.position - pointOnSurface;
+                    placePos = hit.point + offset;
+                }
+                else
+                {
+                    placePos = hit.point;
+                }
+            }
+            else
+            {
+                // Бокова поверхня — ставимо блок на поверхню + зсув на піврозміру у напрямку нормалі
+                Collider instanceCollider = instance.GetComponent<Collider>();
+                if (instanceCollider != null)
+                {
+                    float halfDepth = Vector3.Scale(instanceCollider.bounds.size, hit.normal).magnitude / 2f;
+                    placePos = hit.point + hit.normal * halfDepth;
+                }
+                else
+                {
+                    placePos = hit.point + hit.normal * 0.5f;
+                }
+            }
 
-            if (forward.sqrMagnitude < 0.001f)
-                forward = Vector3.forward;
-
-            Quaternion rotation = Quaternion.LookRotation(forward, Vector3.up);
 
             instance.transform.position = placePos;
             instance.transform.rotation = rotation;
@@ -88,6 +118,8 @@ public class FlexitItem : Item
             Debug.Log("Немає поверхні для розміщення");
         }
     }
+
+
 
     public override bool IsBuildTool()
     {
