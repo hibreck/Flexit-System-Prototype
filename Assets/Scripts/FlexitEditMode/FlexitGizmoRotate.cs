@@ -25,6 +25,7 @@ public class FlexitGizmoRotate : MonoBehaviour
     private InputAction leftClick;
     private InputAction shiftAction;
     private InputAction resetRotationAction;
+    private InputAction scrollAction;
 
     private Camera cam;
 
@@ -35,6 +36,9 @@ public class FlexitGizmoRotate : MonoBehaviour
     private Vector3 rotationAxis;
 
     private const float rotationStep = 5f;
+    
+    private const float scrollRotationStep = 5f; // крок обертання градусами
+
 
     private int gizmoLayerMask;
 
@@ -75,6 +79,9 @@ public class FlexitGizmoRotate : MonoBehaviour
         leftClick = new InputAction(type: InputActionType.Button, binding: "<Mouse>/leftButton");
         shiftAction = new InputAction(type: InputActionType.Button, binding: "<Keyboard>/leftShift");
         resetRotationAction = new InputAction(type: InputActionType.Button, binding: "<Keyboard>/r");
+        scrollAction = new InputAction(type: InputActionType.Value, binding: "<Mouse>/scroll");
+        scrollAction.Enable();
+
 
         leftClick.Enable();
         shiftAction.Enable();
@@ -88,6 +95,7 @@ public class FlexitGizmoRotate : MonoBehaviour
 
     private void Update()
     {
+        if (FlexitGizmoManager.Instance.CurrentMode != GizmoMode.RotatePivot) return;
         if (cam == null || target == null) return;
 
         UpdateHandles();
@@ -104,11 +112,20 @@ public class FlexitGizmoRotate : MonoBehaviour
         {
             EndDrag();
         }
+        if (scrollAction != null && scrollAction.enabled)
+        {
+            Vector2 scrollValue = scrollAction.ReadValue<Vector2>();
+            if (scrollValue.y != 0)
+            {
+                HandleScroll(scrollValue);
+            }
+        }
 
-        
 
-        
+
+
         UpdateBindHelpUI();
+
     }
     public void SetPivotReference(FlexitGizmoPivot pivot)
     {
@@ -134,6 +151,29 @@ public class FlexitGizmoRotate : MonoBehaviour
     }
 
 
+
+    private void HandleScroll(Vector2 scrollValue)
+    {
+        if (Keyboard.current != null && Keyboard.current.altKey.isPressed)
+            return;
+        if (target == null || isDragging) return;
+
+        float deltaAngle;
+
+        if (shiftAction != null && shiftAction.IsPressed())
+        {
+            deltaAngle = scrollValue.y * 1f; // плавне обертання
+        }
+        else
+        {
+            deltaAngle = Mathf.Sign(scrollValue.y) * rotationStep; // крок 5 градусів
+        }
+
+        target.Rotate(Vector3.up, deltaAngle, Space.World);
+
+        Vector3 normalizedRotation = NormalizeEuler(target.localEulerAngles);
+        gizmoInfoUI.SetRotateInfo(normalizedRotation);
+    }
 
 
 
@@ -340,6 +380,7 @@ public class FlexitGizmoRotate : MonoBehaviour
         leftClick?.Disable();
         shiftAction?.Disable();
         resetRotationAction?.Disable();
+        scrollAction.Disable();
 
         if (dragAnchor != null)
         {

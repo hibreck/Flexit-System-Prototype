@@ -295,16 +295,7 @@ public class FlexitGizmoMove : MonoBehaviour, IFlexitGizmo
         gizmoInfoUI?.SetPositionInfo(target.position);
     }
 
-    public void SnapToPixelGrid()
-    {
-        Debug.Log($"Reset move action triggered in {this.GetType().Name} at frame {Time.frameCount}");
-        float pixelStep = 4f / 64f;
-        Vector3 pos = target.position;
-        pos.x = Mathf.Round(pos.x / pixelStep) * pixelStep;
-        pos.y = Mathf.Round(pos.y / pixelStep) * pixelStep;
-        pos.z = Mathf.Round(pos.z / pixelStep) * pixelStep;
-        target.position = pos;
-    }
+   
 
     public void InitializeCustomVectors()
     {

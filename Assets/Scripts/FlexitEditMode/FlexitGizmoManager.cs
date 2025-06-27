@@ -135,9 +135,7 @@ public class FlexitGizmoManager : MonoBehaviour
 
         switch (CurrentMode)
         {
-            case GizmoMode.Move:
-                moveGizmo?.SnapToPixelGrid();
-                break;
+           
             case GizmoMode.Scale:
                 scaleGizmo?.ResetScaleToNearestPixelStep();
                 break;
