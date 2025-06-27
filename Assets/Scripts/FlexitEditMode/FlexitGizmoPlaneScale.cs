@@ -185,9 +185,14 @@ public class FlexitGizmoPlaneScale : MonoBehaviour
 
                 string name = activeHandle.name;
 
+                // Локальні осі
+                Vector3 localForward = target.forward;
+                Vector3 localUp = target.up;
+                Vector3 localRight = target.right;
+
                 if (name.Contains("XY"))
                 {
-                    dragPlane = new Plane(Vector3.forward, target.position); // Світова нормаль
+                    dragPlane = new Plane(localForward, target.position);
                     if (name.EndsWith("0")) handleDirection = new Vector3(+1, +1, 0);
                     else if (name.EndsWith("1")) handleDirection = new Vector3(+1, -1, 0);
                     else if (name.EndsWith("2")) handleDirection = new Vector3(-1, +1, 0);
@@ -195,7 +200,7 @@ public class FlexitGizmoPlaneScale : MonoBehaviour
                 }
                 else if (name.Contains("XZ"))
                 {
-                    dragPlane = new Plane(Vector3.up, target.position); // Світова нормаль
+                    dragPlane = new Plane(localUp, target.position);
                     if (name.EndsWith("0")) handleDirection = new Vector3(+1, 0, +1);
                     else if (name.EndsWith("1")) handleDirection = new Vector3(+1, 0, -1);
                     else if (name.EndsWith("2")) handleDirection = new Vector3(-1, 0, +1);
@@ -203,7 +208,7 @@ public class FlexitGizmoPlaneScale : MonoBehaviour
                 }
                 else if (name.Contains("YZ"))
                 {
-                    dragPlane = new Plane(Vector3.right, target.position); // Світова нормаль
+                    dragPlane = new Plane(localRight, target.position);
                     if (name.EndsWith("0")) handleDirection = new Vector3(0, +1, +1);
                     else if (name.EndsWith("1")) handleDirection = new Vector3(0, +1, -1);
                     else if (name.EndsWith("2")) handleDirection = new Vector3(0, -1, +1);
@@ -219,6 +224,7 @@ public class FlexitGizmoPlaneScale : MonoBehaviour
             }
         }
     }
+
 
 
 
