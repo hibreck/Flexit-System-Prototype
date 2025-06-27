@@ -15,6 +15,42 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "InvertoryUse",
+                    "type": "Button",
+                    "id": "ce07f477-4ba2-4e68-9804-e6fbe79f36a8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchSlot",
+                    "type": "Value",
+                    "id": "b110a269-6703-4234-9981-416dd21bbd68",
+                    "expectedControlType": "Integer",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "ScrollSlot",
+                    "type": "Value",
+                    "id": "d74115f9-ef62-4d8f-8fe7-b77048b275d1",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "UseActiveSlot",
+                    "type": "Button",
+                    "id": "9be86a00-88b6-4c9d-897e-3d9c6452f0d2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Look",
                     "type": "Value",
                     "id": "6b444451-8a00-4d00-a97e-f47457f736a8",
@@ -217,6 +253,94 @@
                     "processors": "",
                     "groups": "Joystick",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c3a9302-894e-428f-8add-27ad1525e789",
+                    "path": "<Keyboard>/f",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": ";Keyboard;Keyboard&Mouse",
+                    "action": "InvertoryUse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a04b05f-e064-4e99-a097-44cc569b33ff",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "Scale(factor=0)",
+                    "groups": ";Keyboard;Keyboard&Mouse",
+                    "action": "SwitchSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23eb388a-d36e-46b3-8701-2e3274bffe29",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "Scale",
+                    "groups": ";Keyboard;Keyboard&Mouse",
+                    "action": "SwitchSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de43e709-f96a-42e8-9708-00b12f09707d",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "Scale(factor=2)",
+                    "groups": ";Keyboard;Keyboard&Mouse",
+                    "action": "SwitchSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48fd6698-b275-47ba-a2ef-b74095878e79",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "Scale(factor=3)",
+                    "groups": ";Keyboard;Keyboard&Mouse",
+                    "action": "SwitchSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "04973167-0936-43ea-a0a9-8ab98e643539",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "Scale(factor=4)",
+                    "groups": ";Keyboard;Keyboard&Mouse",
+                    "action": "SwitchSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93e35baf-79c8-4651-afe6-eabc75d6dd95",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Mouse;Keyboard&Mouse",
+                    "action": "ScrollSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cf496ba7-4107-49ef-812d-ae580a1c2f5c",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": ";Mouse;Keyboard&Mouse",
+                    "action": "UseActiveSlot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -101,6 +101,42 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""InvertoryUse"",
+                    ""type"": ""Button"",
+                    ""id"": ""ce07f477-4ba2-4e68-9804-e6fbe79f36a8"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchSlot"",
+                    ""type"": ""Value"",
+                    ""id"": ""b110a269-6703-4234-9981-416dd21bbd68"",
+                    ""expectedControlType"": ""Integer"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ScrollSlot"",
+                    ""type"": ""Value"",
+                    ""id"": ""d74115f9-ef62-4d8f-8fe7-b77048b275d1"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""UseActiveSlot"",
+                    ""type"": ""Button"",
+                    ""id"": ""9be86a00-88b6-4c9d-897e-3d9c6452f0d2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Look"",
                     ""type"": ""Value"",
                     ""id"": ""6b444451-8a00-4d00-a97e-f47457f736a8"",
@@ -303,6 +339,94 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Joystick"",
                     ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c3a9302-894e-428f-8add-27ad1525e789"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard;Keyboard&Mouse"",
+                    ""action"": ""InvertoryUse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a04b05f-e064-4e99-a097-44cc569b33ff"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=0)"",
+                    ""groups"": "";Keyboard;Keyboard&Mouse"",
+                    ""action"": ""SwitchSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""23eb388a-d36e-46b3-8701-2e3274bffe29"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale"",
+                    ""groups"": "";Keyboard;Keyboard&Mouse"",
+                    ""action"": ""SwitchSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""de43e709-f96a-42e8-9708-00b12f09707d"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=2)"",
+                    ""groups"": "";Keyboard;Keyboard&Mouse"",
+                    ""action"": ""SwitchSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""48fd6698-b275-47ba-a2ef-b74095878e79"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=3)"",
+                    ""groups"": "";Keyboard;Keyboard&Mouse"",
+                    ""action"": ""SwitchSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04973167-0936-43ea-a0a9-8ab98e643539"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=4)"",
+                    ""groups"": "";Keyboard;Keyboard&Mouse"",
+                    ""action"": ""SwitchSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""93e35baf-79c8-4651-afe6-eabc75d6dd95"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Mouse;Keyboard&Mouse"",
+                    ""action"": ""ScrollSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cf496ba7-4107-49ef-812d-ae580a1c2f5c"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": "";Mouse;Keyboard&Mouse"",
+                    ""action"": ""UseActiveSlot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1495,6 +1619,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        m_Player_InvertoryUse = m_Player.FindAction("InvertoryUse", throwIfNotFound: true);
+        m_Player_SwitchSlot = m_Player.FindAction("SwitchSlot", throwIfNotFound: true);
+        m_Player_ScrollSlot = m_Player.FindAction("ScrollSlot", throwIfNotFound: true);
+        m_Player_UseActiveSlot = m_Player.FindAction("UseActiveSlot", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
@@ -1617,6 +1745,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
+    private readonly InputAction m_Player_InvertoryUse;
+    private readonly InputAction m_Player_SwitchSlot;
+    private readonly InputAction m_Player_ScrollSlot;
+    private readonly InputAction m_Player_UseActiveSlot;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Interact;
@@ -1640,6 +1772,22 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Move".
         /// </summary>
         public InputAction @Move => m_Wrapper.m_Player_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/InvertoryUse".
+        /// </summary>
+        public InputAction @InvertoryUse => m_Wrapper.m_Player_InvertoryUse;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/SwitchSlot".
+        /// </summary>
+        public InputAction @SwitchSlot => m_Wrapper.m_Player_SwitchSlot;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/ScrollSlot".
+        /// </summary>
+        public InputAction @ScrollSlot => m_Wrapper.m_Player_ScrollSlot;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/UseActiveSlot".
+        /// </summary>
+        public InputAction @UseActiveSlot => m_Wrapper.m_Player_UseActiveSlot;
         /// <summary>
         /// Provides access to the underlying input action "Player/Look".
         /// </summary>
@@ -1701,6 +1849,18 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @InvertoryUse.started += instance.OnInvertoryUse;
+            @InvertoryUse.performed += instance.OnInvertoryUse;
+            @InvertoryUse.canceled += instance.OnInvertoryUse;
+            @SwitchSlot.started += instance.OnSwitchSlot;
+            @SwitchSlot.performed += instance.OnSwitchSlot;
+            @SwitchSlot.canceled += instance.OnSwitchSlot;
+            @ScrollSlot.started += instance.OnScrollSlot;
+            @ScrollSlot.performed += instance.OnScrollSlot;
+            @ScrollSlot.canceled += instance.OnScrollSlot;
+            @UseActiveSlot.started += instance.OnUseActiveSlot;
+            @UseActiveSlot.performed += instance.OnUseActiveSlot;
+            @UseActiveSlot.canceled += instance.OnUseActiveSlot;
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
@@ -1739,6 +1899,18 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @InvertoryUse.started -= instance.OnInvertoryUse;
+            @InvertoryUse.performed -= instance.OnInvertoryUse;
+            @InvertoryUse.canceled -= instance.OnInvertoryUse;
+            @SwitchSlot.started -= instance.OnSwitchSlot;
+            @SwitchSlot.performed -= instance.OnSwitchSlot;
+            @SwitchSlot.canceled -= instance.OnSwitchSlot;
+            @ScrollSlot.started -= instance.OnScrollSlot;
+            @ScrollSlot.performed -= instance.OnScrollSlot;
+            @ScrollSlot.canceled -= instance.OnScrollSlot;
+            @UseActiveSlot.started -= instance.OnUseActiveSlot;
+            @UseActiveSlot.performed -= instance.OnUseActiveSlot;
+            @UseActiveSlot.canceled -= instance.OnUseActiveSlot;
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
@@ -2394,6 +2566,34 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "InvertoryUse" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInvertoryUse(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchSlot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchSlot(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ScrollSlot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnScrollSlot(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "UseActiveSlot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnUseActiveSlot(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Look" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
