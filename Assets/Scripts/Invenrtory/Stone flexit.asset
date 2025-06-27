@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53cfef793df1de4e97ff0153721c779, type: 3}
+  m_Name: Stone flexit
+  m_EditorClassIdentifier: 
+  itemName: Stone flexit
+  icon: {fileID: -1037087636, guid: da4c34a919d2d5643ac377f2dbb81a46, type: 3}
+  flexitPrefab: {fileID: 3702346477132603403, guid: 4013a2cc03d394d4fa186012c0d989f8, type: 3}
