@@ -115,21 +115,24 @@ public class FlexitGizmoManager : MonoBehaviour
 
     private void OnSwitchToMove(InputAction.CallbackContext ctx)
     {
+        if (!IsEditModeActive) return;
         SetMode(GizmoMode.Move);
     }
-
     private void OnSwitchToScale(InputAction.CallbackContext ctx)
     {
+        if (!IsEditModeActive) return;
         SetMode(GizmoMode.Scale);
     }
-
     private void OnSwitchToRotatePivot(InputAction.CallbackContext ctx)
     {
+        if (!IsEditModeActive) return;
         SetMode(GizmoMode.RotatePivot);
     }
 
     private void OnReset(InputAction.CallbackContext ctx)
     {
+        if (!IsEditModeActive) return;
+
         switch (CurrentMode)
         {
             case GizmoMode.Move:
@@ -144,23 +147,29 @@ public class FlexitGizmoManager : MonoBehaviour
         }
     }
 
+
     private void OnPivotReset(InputAction.CallbackContext ctx)
     {
+        if (!IsEditModeActive) return;
+
         if (CurrentMode == GizmoMode.RotatePivot)
         {
             pivotGizmo?.ResetPivotPosition();
         }
     }
 
+
     private void OnModeScroll(InputAction.CallbackContext ctx)
     {
-        Vector2 scroll = ctx.ReadValue<Vector2>();
+        if (!IsEditModeActive) return;
 
+        Vector2 scroll = ctx.ReadValue<Vector2>();
         if (Mathf.Abs(scroll.y) > 0.01f)
         {
             CycleMode(scroll.y);
         }
     }
+
 
     private void CycleMode(float scrollDelta)
     {
@@ -341,4 +350,6 @@ public class FlexitGizmoManager : MonoBehaviour
         pivotGizmo?.SetHandlesActive(false);
         rotateGizmo?.SetHandlesActive(false);
     }
+    public bool IsEditModeActive => currentEditableBlock != null && currentEditableBlock.IsInEditMode;
+
 }
