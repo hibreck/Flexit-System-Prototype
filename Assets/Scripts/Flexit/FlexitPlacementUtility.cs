@@ -1,10 +1,10 @@
-// FlexitPlacementUtility.cs
+﻿// FlexitPlacementUtility.cs
 using UnityEngine;
 
 public static class FlexitPlacementUtility
 {
     public static bool ComputePlacement(Camera cam, GameObject prefab, float maxDistance, LayerMask surfaceMask,
-    out Vector3 position, out Quaternion rotation)
+out Vector3 position, out Quaternion rotation)
     {
         position = Vector3.zero;
         rotation = Quaternion.identity;
@@ -24,12 +24,21 @@ public static class FlexitPlacementUtility
 
         if (Mathf.Abs(verticalDot) > 0.9f)
         {
-            Vector3 forward = cam.transform.forward;
-            forward.y = 0f;
-            forward.Normalize();
-            if (forward.sqrMagnitude < 0.001f) forward = Vector3.forward;
+            // ⬇️ Нова логіка для Flexit-блоків
+            if (hit.collider.CompareTag("Flexit"))
+            {
+                // орієнтація буде такою ж, як у блоку під курсором
+                rotation = Quaternion.Euler(0f, hit.collider.transform.eulerAngles.y, 0f);
+            }
+            else
+            {
+                Vector3 forward = cam.transform.forward;
+                forward.y = 0f;
+                forward.Normalize();
+                if (forward.sqrMagnitude < 0.001f) forward = Vector3.forward;
 
-            rotation = Quaternion.LookRotation(forward, Vector3.up);
+                rotation = Quaternion.LookRotation(forward, Vector3.up);
+            }
         }
         else
         {
@@ -54,6 +63,7 @@ public static class FlexitPlacementUtility
         position = placePos;
         return true;
     }
+
 
     private static Vector3 CalculateOffset(Collider col, Vector3 hitNormal, Quaternion rotation)
     {
