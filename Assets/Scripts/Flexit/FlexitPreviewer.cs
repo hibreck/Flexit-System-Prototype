@@ -77,6 +77,7 @@ public class FlexitPreviewer : MonoBehaviour
         foreach (var rb in currentGhost.GetComponentsInChildren<Rigidbody>())
             rb.isKinematic = true;
 
+
         SetGhostMaterial(currentGhost);
     }
 
@@ -105,7 +106,10 @@ public class FlexitPreviewer : MonoBehaviour
     {
         if (currentGhost == null || cam == null) return;
 
-        if (!FlexitPlacementUtility.ComputePlacement(cam, flexitItem.flexitPrefab, previewDistance, placeableSurfaces, out Vector3 pos, out Quaternion rot))
+        bool ignoreSnap = Keyboard.current != null && Keyboard.current.leftShiftKey.isPressed;
+
+        if (!FlexitPlacementUtility.ComputePlacement(cam, flexitItem.flexitPrefab, previewDistance, placeableSurfaces, out Vector3 pos, out Quaternion rot, ignoreSnap))
+
         {
             currentGhost.SetActive(false);
             return;
